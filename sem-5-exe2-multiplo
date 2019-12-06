@@ -1,0 +1,42 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    int dig=0;
+    Console.WriteLine("Digite um número");
+    Console.WriteLine("");
+    Console.WriteLine("caso ele seja multiplo de 2 ou 3 o retorno será 1");
+    Console.WriteLine("caso ele seja multiplo de 5 e 7 o retorno será 2");
+    Console.WriteLine("se ele não tiver numero multiplo o retorno será 0");
+    dig = int.Parse(Console.ReadLine());
+
+    while (dig!=-1){
+      
+      if(dig==0 || dig<-1){
+        Console.WriteLine("Digite apenas números maiores de 0");
+      }
+      else{
+        if (dig%2==0 || dig%3==0){
+          Console.WriteLine("1");
+              
+         }
+        else{
+          if (dig%5==0 && dig%7==0){
+            Console.WriteLine("2");
+                 
+          }
+          else{
+            Console.WriteLine("0");
+          }
+        }
+      }
+      
+      Console.WriteLine ("Digite um número ou digite '-1' para sair");
+      dig = int.Parse(Console.ReadLine());
+      
+    }
+
+
+    Console.WriteLine ("Adeus");
+  }
+}
