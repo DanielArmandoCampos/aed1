@@ -1,0 +1,46 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+
+    int m=0, n=0, aux=0, soma=0;
+
+    Console.WriteLine ("Digite o primeiro numero");
+    m = int.Parse(Console.ReadLine());
+
+    Console.WriteLine("Digite o segundo numero");
+    n = int.Parse(Console.ReadLine());
+    
+    if (m>n){
+     aux=m;
+    
+    while (aux>=n){
+        soma = aux + soma;
+        Console.Write ("{0} ", aux);
+        aux--;
+               
+      }
+      while (aux<m){
+        aux++;
+        Console.Write ("{0} ", aux);
+        soma = aux+soma;
+      }
+      }
+    if (m<n){
+     aux=n;
+    while (aux>=m){
+        soma = aux+soma;
+        Console.Write("{0} ", aux);
+        aux--;
+      }
+    while (aux<n){
+       aux++;
+        Console.Write("{0} ", aux);
+        soma=aux+soma;
+      }
+      
+    }
+    Console.WriteLine ("");
+    Console.WriteLine ("a soma dos numeros é: {0}", soma);
+  }
+}
