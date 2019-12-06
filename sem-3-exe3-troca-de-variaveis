@@ -1,0 +1,24 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+
+    int num1=0,num2=0, mula=0;
+
+    Console.WriteLine("Digite o 1° numero: ");
+    num1 = int.Parse(Console.ReadLine());
+ 
+    Console.WriteLine("Digite o 2° numero: ");
+    num2 = int.Parse(Console.ReadLine());
+
+    mula = num1;
+    num1=num2;
+    num2 = mula;
+    
+    Console.WriteLine("O primeiro numero foi trocado pelo segundo. o Primeiro numero digitado, que era {0}, agora é {1}" , num2, num1);
+
+     Console.WriteLine("O segundo numero foi trocado pelo primeiro. O Segundo numero digitado, que era {0}, agora é {1}" , num1 ,num2);
+    
+
+  }
+}
