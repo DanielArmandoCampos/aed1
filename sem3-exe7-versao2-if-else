@@ -1,0 +1,137 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    float horas=0;
+    int mat=0, titul=0, volta=0, outro=0;
+    string nome ;
+    double salbase=0, salbruto=0, saliquido=0, taxainss=0,irpf=0;
+
+      //entrada de dados
+    while(outro==0){
+    Console.WriteLine("");
+    Console.WriteLine("");
+    Console.WriteLine("");
+    Console.WriteLine ("Entre com o nome do Professor:");
+    nome=Console.ReadLine();
+    Console.WriteLine ("Entre com a matricula do Professor:");
+    mat=int.Parse(Console.ReadLine());
+
+    while(volta!=1){ // volta se digitado titulacao incorreta
+    Console.WriteLine("");
+    Console.WriteLine ("Entre com a titulação do Professor:");
+    Console.WriteLine ("Utilize:");
+    Console.WriteLine ("1 - para Especialista");
+    Console.WriteLine ("2 - para Mestre");
+    Console.WriteLine ("3 - para Doutor");
+    titul = int.Parse(Console.ReadLine());
+     
+    if (titul==1){
+        titul=15;
+    }
+    else{
+        if (titul==2){
+              titul=20;
+        }
+        else{
+            if (titul==3){
+                  titul=30;
+            }
+            else{ 
+                  Console.WriteLine("");
+                  Console.WriteLine ("Entre com a titulação correta do Professor:");
+    }   }   }
+      if(titul==15||titul==20||titul==30){
+        volta++;
+      }}
+      
+    
+    Console.WriteLine ("Entre com as horas semanais do Professor:");
+    horas=float.Parse(Console.ReadLine());
+    Console.WriteLine("");
+    Console.WriteLine("");
+
+    Console.WriteLine("{0} , Matricula: {1}", nome, mat);
+    Console.WriteLine("");
+
+      //CALCULOS
+
+
+      //calculo da hora
+      //valor do titulo
+      
+
+    salbruto=((horas*4*titul)*1.15);
+    Console.WriteLine("O valor do seu salário bruto é: R${0}", salbruto);
+    Console.WriteLine("");
+
+    //calculo do salario com o desconto do inss
+    if (salbruto>=151 && salbruto<=256){
+      taxainss=(salbruto*0.08);
+    }
+    else{
+        if (salbruto>256 && salbruto<=510){
+        taxainss=(salbruto*0.09);
+        }
+        else{
+            if (salbruto>510 && salbruto<=1200){
+            taxainss=(salbruto*0.1);
+            }
+            else{
+                if (salbruto>1200){
+                  taxainss=(salbruto*0.11);
+                }
+                else{
+                    taxainss=0;
+    
+    }   }   }   }
+   
+    Console.WriteLine("O valor do desconto do INSS é de: R${0}", taxainss);
+    Console.WriteLine("");
+    salbase=(salbruto-taxainss);
+    
+
+    //calculo do IRPF
+    if(salbase<800){
+      saliquido=(1/salbase);
+    }
+    if(salbase>800 && salbase<=1200){
+      irpf=(salbase*0.1);
+    }
+    if(salbase>1200 && salbase<=2400){
+      irpf=(salbase*0.15);
+    }
+    if(salbase>2400 && salbase<=3200){
+      irpf=(salbase*0.2);
+    }
+    if (salbase>3200 && salbase<=5750){
+      irpf=(salbase*0.25);
+    }
+    if (salbase>5750){
+      irpf=(salbase*0.27);
+    }
+    Console.WriteLine("O valor do desconto do IRPF é de: R${0}", irpf);
+    Console.WriteLine("");
+    
+    saliquido= (salbase-irpf);
+    Console.WriteLine("O valor do salário liquido à receber é de: R${0}", saliquido);
+
+    Console.WriteLine("Deseja calcular o salário de outro professor?");
+    Console.WriteLine("");
+    Console.WriteLine("Digite 0 para sim ou 1 para sair");
+    outro=int.Parse(Console.ReadLine());
+    }
+    Console.WriteLine("");
+    Console.WriteLine("");
+    Console.WriteLine("");
+    Console.WriteLine("");
+    Console.WriteLine("");
+    Console.WriteLine("");
+    Console.WriteLine("");
+    Console.WriteLine("");
+    Console.WriteLine("");
+    Console.WriteLine("");
+    Console.WriteLine("");
+    Console.WriteLine("Obrigado!");
+  }
+}
