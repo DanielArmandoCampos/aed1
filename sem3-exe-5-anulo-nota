@@ -1,0 +1,123 @@
+using System;
+//Console.BackgroundColor = ConsoleColor.Blue;
+class MainClass {
+  public static void Main (string[] args) {
+
+    float n1=0, pn1=0, n2=0, pn2=0, ES=0, PES=0,n=0, mp=0, c=0;
+    
+    //Console.WriteLine("Texto normal"); 
+    //Console.BackgroundColor = ConsoleColor.Blue; PARA MUDAR A COR DO FUNDO DO TEXTO
+   //Console.ForegroundColor = ConsoleColor.Yellow; PARA MUDAR A COR DO TEXTO
+   // Console.WriteLine("Cores de Texto e fundo alteradas");
+    //Console.ResetColor();  RESETA AS CORES, VOLTANDO AO PADRÃO
+    //Console.WriteLine("Texto normal de novo");
+
+    
+    //recebe os dados
+    Console.WriteLine ("Digite o nome do aluno");
+    string nome = Console.ReadLine();
+
+
+    //RECEBE N1
+    while (n!=1)//checagem nota superior a 10
+    {
+      Console.WriteLine ("Digite a nota N1:");
+      n1=float.Parse(Console.ReadLine());
+      //inicio checagem nota
+      if (n1>10){
+        n=0;
+        Console.WriteLine("A nota não pode ser superior a 10");
+      }
+      else{
+        n++;
+      }
+    }
+    //fim checagem nota
+
+    while(c!=1){//checagem ponderada
+      Console.WriteLine ("Digite o peso de N1:");
+      pn1=float.Parse(Console.ReadLine());
+      //inicio da checagem p media ponderada
+      if (pn1>=10){
+        c=0;
+        Console.WriteLine("A soma das 3 medias ponderadas não deve ser superior a 10");
+      }
+      else{
+        c++;
+      }
+    }//fim da checagem da ponderada
+    n=0;
+
+
+    //RECEBE N2
+    while(n!=1){//inicio da checagem p nota superior a 10
+      Console.WriteLine ("Digite a nota N2:");
+      n2=float.Parse(Console.ReadLine());
+      if (n2>10){
+        n=0;
+        Console.WriteLine("A nota não pode ser superior a 10");
+      }
+      else{
+        n++;
+      }
+    }// fim da checagem de n2
+    c=0;
+    while(c!=1){//checagem p media ponderada
+      Console.WriteLine ("Digite o peso de N2:");
+      pn2=float.Parse(Console.ReadLine());
+      //inicio da checagem da media ponderada
+      if (pn1+pn2>=10){
+        c=0;
+        Console.WriteLine("A soma das 3 medias ponderadas não deve ser superior a 10");
+      }
+      else{
+        c++;
+      }
+    }//fim da checagem da ponderada
+
+
+    //RECEBE ES
+    n=0;
+    while(n!=1){//checagem nota superior a 10
+      Console.WriteLine ("Digite a nota ES:");
+      ES=float.Parse(Console.ReadLine());
+      if (ES>10){ //inicio da checagem da nota
+        n=0;
+        Console.WriteLine("A nota não pode ser superior a 10");
+      }
+      else{
+      n++;
+      }
+    }//fim da checagem da nota
+    c=0;
+    while (c!=1){
+      Console.WriteLine ("Digite o peso do Exame Semestral:");
+      PES=float.Parse(Console.ReadLine());
+      if (pn1+pn2+PES>10){//inicio da checagem da           ponderada
+        c=0;
+        Console.WriteLine("A soma das 3 medias ponderadas não deve ser superior a 10");
+      }
+      else{
+      c++;
+      }
+    }//fim da checagem da ponderada
+
+    //calcula a nota final
+    mp = (((n1*pn1)+(n2*pn2)+(ES*PES))/(pn1+pn2+PES));
+    
+    Console.WriteLine("{0} , Sua nota é: {1} e você está: ", nome,mp);
+    //diz se aprovado ou nota
+    if (mp>=5){
+      Console.WriteLine("Aprovado");
+    }
+    else {
+      Console.WriteLine("Reprovado");
+    }
+    if (mp<5 && mp>=4){
+      Console.WriteLine("Você pode fazer o Exame Suplementar");
+    }
+    
+
+
+  }
+}
