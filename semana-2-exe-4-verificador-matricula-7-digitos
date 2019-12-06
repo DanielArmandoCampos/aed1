@@ -1,0 +1,58 @@
+using System;
+
+class MainClass 
+{
+  public static void Main (string[] args) 
+  {
+    int num1, num2, num3, num4, num5, num6, num7, soma1=0,restodiv;
+    
+    
+    
+    Console.WriteLine("Digite a matricula do aluno, um numero de cada vez");
+    
+    num1 = Convert.ToInt32(Console.ReadLine());
+    soma1 += (num1 * 2);
+
+    Console.WriteLine("Digite o segundo numero da matricula do aluno");
+    
+    num2 = Convert.ToInt32(Console.ReadLine());
+    soma1 += (num2 * 3);
+    
+    Console.WriteLine("Digite o terceiro numero da matricula do aluno");
+
+    
+    num3 = Convert.ToInt32(Console.ReadLine());
+    soma1 += (num3 * 4);
+    
+    Console.WriteLine("Digite o quarto numero da matricula do aluno");
+
+    
+    num4 = Convert.ToInt32(Console.ReadLine());
+    soma1 += (num4 * 5);
+    
+    Console.WriteLine("Digite o quinto numero da matricula do aluno");
+    
+    num5 = Convert.ToInt32(Console.ReadLine());
+    soma1 += (num5 * 6);
+    
+    Console.WriteLine("Digite o sexto numero da matricula do aluno");
+    
+    num6 = Convert.ToInt32(Console.ReadLine());
+    soma1 += (num6 * 7);
+   
+    Console.WriteLine("Digite o setimo numero da matricula do aluno");
+    
+    
+    num7 = Convert.ToInt32(Console.ReadLine());
+    soma1 += (num7 * 8);
+  
+
+// para realizar a verificação da matricula
+    restodiv = (soma1 % 10);
+
+// fim da verificação
+
+    Console.WriteLine(" A matricula do aluno, com o código verificador é: {0}{1}{2}{3}{4}{5}{6}-{7}", num1,num2,num3,num4,num5,num6,num7,restodiv);
+
+  }
+}
