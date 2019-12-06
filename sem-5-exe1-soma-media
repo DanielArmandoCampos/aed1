@@ -1,0 +1,20 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+
+    int contador =1 , soma=0;
+
+    while(contador<11){
+      
+      Console.WriteLine("Entre com o {0}º numero",contador);
+      contador++;
+      soma=(int.Parse(Console.ReadLine())+soma); 
+      //Console.WriteLine("CONTADOR VALOR {0}",contador);
+      
+    }
+    contador--;
+    Console.WriteLine ("A soma dos valores digitados é igual a: {0}",soma);
+    Console.WriteLine ("A media dos valores digitados é igual a: {0}",(soma/contador));
+  }
+}
