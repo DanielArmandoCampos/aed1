@@ -1,0 +1,30 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    
+    int num1=0;
+   
+    Console.WriteLine("Informe a Hora, sem os minutos: ");
+
+    num1 = int.Parse(Console.ReadLine());
+  
+   
+     if (num1>=05 && num1<12){
+        Console.WriteLine("Bom Dia!!!");
+
+    } if (num1>=12 && num1<18){
+        Console.WriteLine("Boa Tarde!!!");
+
+    } if (num1>=18 && num1<5){
+        Console.WriteLine("Boa Noite!!!");
+
+    }
+     if (num1>23){
+        Console.WriteLine("Digite um numero entre 00 e 23");
+       
+
+    }
+   
+  }
+}
