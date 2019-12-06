@@ -1,0 +1,31 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+
+    int id=0, mVelho=0,  qtMulheres=0, qtHomens=0;
+    char sexo=' ';
+    for (int i=0;i<5;i++){
+      Console.WriteLine("Digite a idade");
+      id = int.Parse(Console.ReadLine());
+      Console.WriteLine("Digite o sexo");
+      sexo = char.ToUpper(char.Parse(Console.ReadLine()));
+
+      if (id>mVelho) mVelho=id;
+
+      switch  (sexo){
+        case 'F':
+        qtMulheres++;
+        break;
+
+        case 'M':
+        qtHomens++;
+        break;
+
+      }
+    }
+
+
+    Console.WriteLine ("A Pessoa mais velha possui {0} anos, existem {1} mulheres e {2} homens", mVelho, qtMulheres, qtHomens);
+  }
+}
