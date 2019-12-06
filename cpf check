@@ -1,0 +1,117 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    int num1, num2, num3, num4, num5, num6, num7, num8, num9, num10, num11, soma1, soma2, restodiv, verificador1, verificador2;
+    string entrada;
+    soma1=0;
+    soma2=0;
+
+    Console.WriteLine("Digite o CPF");
+    entrada = Console.ReadLine();
+    num1 = Convert.ToInt32(entrada);
+    soma2 = (num1*11);
+    soma1 = (num1*10);
+
+    entrada = Console.ReadLine();
+    num2 = Convert.ToInt32(entrada);
+    soma1 += (num2 * 9);
+    soma2 += (num2 * 10);
+
+
+    entrada = Console.ReadLine();
+    num3 = Convert.ToInt32(entrada);
+    soma1 += (num3 * 8);
+    soma2 += (num3 * 9);
+
+    Console.WriteLine(".");
+
+    entrada = Console.ReadLine();
+    num4 = Convert.ToInt32(entrada);
+    soma1 += (num4 * 7);
+    soma2 += (num4 * 8);
+
+    entrada = Console.ReadLine();
+    num5 = Convert.ToInt32(entrada);
+    soma1 += (num5 * 6);
+    soma2 += (num5 * 7);
+
+    entrada = Console.ReadLine();
+    num6 = Convert.ToInt32(entrada);
+    soma1 += (num6 * 5);
+    soma2 += (num6 * 6);
+
+    Console.WriteLine(".");
+
+    entrada = Console.ReadLine();
+    num7 = Convert.ToInt32(entrada);
+    soma1 += (num7 * 4);
+    soma2 += (num7 * 5);
+
+    entrada = Console.ReadLine();
+    num8 = Convert.ToInt32(entrada);
+    soma1 += (num8 * 3);
+    soma2 += (num8 * 4);
+
+    entrada = Console.ReadLine ();
+    num9 = Convert.ToInt32(entrada);
+    soma1 += (num9 * 2);
+    soma2 += (num9 * 3);
+
+// para realizar a verificação do primeiro numero
+    restodiv = (soma1%11);
+
+    if (restodiv<2)
+    { 
+      verificador1=0;
+    }
+   
+    else 
+    {
+      verificador1 = (11-restodiv);
+    }
+
+// fim da verificação
+
+    Console.WriteLine("-");
+
+    entrada = Console.ReadLine ();
+    num10 = Convert.ToInt32(entrada);
+    soma2 += (num10 * 2);
+
+
+    entrada = Console.ReadLine ();
+    num11 = Convert.ToInt32(entrada);
+    
+
+    // para realizar a verificação do segundo numero
+      restodiv = (soma2%11);
+
+    if (restodiv<2)
+    { 
+      verificador2=0;
+    }
+   
+    else 
+    {
+      verificador2 = (11-restodiv);
+    }
+
+// fim da verificação
+
+   if (verificador1==num10){
+      if (verificador2==num11)
+      {
+        Console.WriteLine ("CPF VALIDO !!");
+      }
+      else
+      {
+      Console.WriteLine ("CPF INVALIDO !!");
+      }
+   }
+   else
+   {
+   Console.WriteLine ("CPF INVALIDO !!");
+   }
+  }
+}
