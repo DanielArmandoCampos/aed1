@@ -1,0 +1,40 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+
+    float altura=0 ;
+    char sexo = ' ';
+    int sexovalidador=0;
+    
+     Console.WriteLine("Digite a altura ou um numero negativo para sair");
+      altura=float.Parse(Console.ReadLine());
+      while (altura>0){  
+        while (sexovalidador==0){
+          Console.WriteLine ("Digite o Sexo");
+          sexo=char.Parse(Console.ReadLine());
+          sexo=char.ToUpper(sexo);
+
+          switch (sexo){
+            case 'M':
+              Console.WriteLine ("O peso ideal é: {0}",((72.7*altura)-58.0f));
+              sexovalidador=1;
+            break;
+            case 'F':
+              Console.WriteLine ("O peso ideal é: {0}",((62.1*altura)-44.7f));
+              sexovalidador=1;
+            break;
+            default:
+              Console.WriteLine ("Sexo invalido!");
+            break;
+          } 
+        }
+        sexovalidador=0;
+
+        Console.WriteLine("Digite a altura ou um numero negativo para sair");
+        altura=float.Parse(Console.ReadLine());
+        
+      }
+    Console.WriteLine ("Hello World");
+  }
+}
