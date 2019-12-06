@@ -1,0 +1,30 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+
+  char caractere = ' ';
+  bool ehvogal = false;
+ 
+  while (ehvogal == false){
+    Console.WriteLine("entre com uma letra: ");
+    caractere=char.Parse(Console.ReadLine());
+
+    switch (char.ToUpper(caractere)){
+
+      case 'A':
+      case 'E':
+      case 'I':
+      case 'O':
+      case 'U':
+        ehvogal=true;
+      break;
+      default:
+        ehvogal=false;
+      break;
+    }
+  }
+    Console.WriteLine ("Achei uma vogal {0}",caractere);
+    Console.ReadKey();
+  }
+}
