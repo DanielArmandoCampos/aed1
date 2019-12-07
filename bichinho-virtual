@@ -1,0 +1,50 @@
+using System;
+
+namespace tama{
+  class MainClass {
+    public static void Main (string[] args) {
+
+      Bichinho bicho1 = new Bichinho("Pow", 0,100,0,0);
+      
+      Console.WriteLine(bicho1.tudo());
+    }
+  }
+}
+
+/*Classe Bichinho Virtual:Crie uma classe que modele um Tamagushi (Bichinho Eletrônico):
+
+Atributos: Nome, Fome, Saúde e Idade b. Métodos: Alterar Nome, Fome, Saúde e Idade; Retornar Nome, Fome, Saúde e Idade Obs: Existe mais uma informação que devemos levar em consideração, o Humor do nosso tamagushi, este humor é uma combinação entre os atributos Fome e Saúde, ou seja, um campo calculado, então não devemos criar um atributo para armazenar esta informação por que ela pode ser calculada a qualquer momento.
+*/
+
+
+namespace tama{
+  
+  class Bichinho{
+    public string nome;
+    public int fome;
+    public int saude;
+    public int idade;
+    public int humor;
+
+    //Construtor ( tem que ter o mesmo nome da classe)
+    public Bichinho (string n, int f, int s, int i, int h){
+      nome = n;
+      fome = f;
+      saude = s;
+      idade = i;
+      humor = h;
+      
+    }
+    public humor(){
+      //continuar
+      fome e saude
+
+    }
+    public string tudo(){
+      return  "Nome: " + nome + "\n" + "Fome: " + fome + "\n" + "Saúde: " + saude + "\n" + "Idade: "+ idade + "\n" + "Humor: " + humor ;
+    }
+    
+
+  }
+}
+   
