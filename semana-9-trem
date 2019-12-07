@@ -1,0 +1,89 @@
+class Trem{
+  private float carga_total;
+  private float cap_ocupada;
+  private int quant_vagoes;
+  private string nome;
+  
+
+  public Trem(){
+    carga_total = 3000f;
+    cap_ocupada = 0f;
+    quant_vagoes = 3;
+    nome = "Sem Nome";
+  } 
+
+  public Trem(string nome, int vagoes, float cap_max, float cap_ocup){
+    this.nome = nome;
+    this.quant_vagoes = vagoes;
+    this.carga_total = cap_max;
+    this.cap_ocupada = cap_ocup;
+  }
+
+  public string getNome(){
+    return nome;
+  }
+
+  public float getCapacidadeOcupada(){
+    return cap_ocupada;
+  }
+
+  public void setNome(string n){
+    nome = n;
+  }
+
+  public void setCapacidadeOcupada(float ocup){
+    if(ocup >= 0f && ocup <= this.cap_maxima){
+      this.cap_ocupada = ocup;
+    }
+  }
+
+  public bool MaiorCapacidade(Trem outro_trem){
+    if(this.cap_maxima > outro_trem.cap_maxima){
+      return true;
+    }
+
+    return false;
+  }
+
+  public bool trocar_vagao(int qtd_vagoes){
+    if(qtd_vagoes <= (3)){
+      return true;
+    }
+    else
+      return false;
+  }
+
+
+
+}
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+
+    Trem bala = new Trem("bala", 3, 3000f, 3000f);
+    //Chama os métodos do objeto fulano:
+    Console.WriteLine("Trem: {0}", bala.Trem());
+
+   /* Pessoa ze = new Pessoa("Jose", 34, 1.78f, 82f);
+    Pessoa maria = new Pessoa("Maria", 32, 1.8f, 79f);
+
+    Pessoa jao = new Pessoa("Joao", 56, 1.65f, 85f);
+    ze.setPai(jao);
+
+    fulano.setPai(ze);
+    Console.WriteLine("Pais do fulano: {0}", fulano.PaiMae());
+
+    fulano.setMae(maria);
+    Console.WriteLine("Pais do fulano: {0}", fulano.PaiMae());
+
+    Pessoa outra_pessoa = new Pessoa();
+    Console.WriteLine("Pais da outra_pessoa: {0}", outra_pessoa.PaiMae());
+
+    Console.WriteLine("Avô: {0}", fulano.AvoPaternoH());
+        
+*/
+
+    Console.WriteLine ("Hello World");
+  }
+}
