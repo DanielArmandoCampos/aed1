@@ -1,0 +1,51 @@
+namespace carro{
+
+  class Veiculo{
+    public int qtRodas;
+    private string cor; 
+    public int ano; 
+    private string modelo;
+    public double valorAtual;
+    private bool seguro;
+    public bool pendencia;
+
+    // construtor sem parametro;
+    public Veiculo (){
+      qtRodas = 3;
+      cor = "verde";
+      ano = 2119;
+      modelo = "voador";
+      valorAtual = 100000;
+      seguro = false;
+      pendencia = true;
+    }
+    // construtor com ano, cor, valor
+    public Veiculo (int a, string c, double va){
+      ano = a;
+      cor = c;
+      valorAtual = va;
+    }
+    // costrutor com todos os atributos
+    public Veiculo (string c, int a, string m, double va, bool s, bool p){
+      
+      cor = c;
+      ano = a;
+      modelo = m;
+      valorAtual = va;
+      seguro = s;
+      pendencia = p;
+    }
+  }
+}
+
+using System;
+namespace carro{
+  class MainClass {
+    public static void Main (string[] args) {
+
+      Veiculo veiculoFuturo = new Veiculo();
+      Console.WriteLine(veiculoFuturo.modelo());
+      Console.WriteLine ("Hello World");
+    }
+  }
+}
